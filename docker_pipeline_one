@@ -8,5 +8,13 @@ pipeline {
         sh 'node --version'
       }
     }
+   stage('database') {
+    agent {
+      docer { image 'mysql'}
+    }
+      steps {
+        sh 'SELECT * FROM '
+      }
+    }
   }
 }
